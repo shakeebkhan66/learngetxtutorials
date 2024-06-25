@@ -2,7 +2,7 @@
 
 ### FLUTTER GETX ROADMAP
 
-## Flutter GetX Road Map and what we will learn in this playlist
+# Flutter GetX Road Map and what we will learn in this playlist
 
 1- GetX RoadMap
 2- Creating our Project and adding Getx Packages
