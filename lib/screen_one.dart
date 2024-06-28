@@ -2,8 +2,7 @@ import "package:flutter/material.dart";
 import "package:get/get.dart";
 
 class ScreenOne extends StatefulWidget {
-  String name;
-  ScreenOne({super.key, required this.name});
+  ScreenOne({super.key});
 
   @override
   State<ScreenOne> createState() => _ScreenOneState();
@@ -14,10 +13,10 @@ class _ScreenOneState extends State<ScreenOne> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "Screen One ${widget.name}",
+        title: const Text(
+          "Screen One",
           textAlign: TextAlign.center,
-          style: const TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
       ),
       body: Column(

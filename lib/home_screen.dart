@@ -87,7 +87,8 @@ class _HomeScreenState extends State<HomeScreen> {
           Center(
             child: InkWell(
                 onTap: () {
-                  Get.to(ScreenOne(name: "Shakeeb Ahmed Khan",));
+                  // Get.to(ScreenOne(name: "Shakeeb Ahmed Khan",));
+                  Get.toNamed("/screen");
                 },
                 child: const Text(
                   "Go to next screen",
