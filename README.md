@@ -1,16 +1,14 @@
 # learngetx
 
-A new Flutter project.
+### FLUTTER GETX ROADMAP
 
-## Getting Started
+# Flutter GetX Road Map and what we will learn in this playlist
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1- GetX RoadMap
+2- Creating our Project and adding Getx Packages
+3- Get Material App (Why we need Get Material App)
+4- GetX as utilities
+5- GetX Snackbar
+6- GetX Dialog Alert
+7- GetX Bottom Sheet
+8- GetX Change Light & Dark Theme with GetX Flutter
