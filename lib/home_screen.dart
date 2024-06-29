@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:learngetx/screen_one.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
