@@ -6,7 +6,6 @@ class ChangeLanguage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     Future<void> showPopupMenu(BuildContext context) async {
       await showMenu(
         context: context,
@@ -61,7 +60,6 @@ class ChangeLanguage extends StatelessWidget {
       );
     }
 
-
     return Scaffold(
       appBar: AppBar(
         actions: [
@@ -83,8 +81,14 @@ class ChangeLanguage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           ListTile(
-            title: Text('message'.tr),
-            subtitle: Text('name'.tr),
+            title: Text(
+              'message'.tr,
+              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            ),
+            subtitle: Text(
+              'name'.tr,
+              style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 18),
+            ),
           ),
         ],
       ),
