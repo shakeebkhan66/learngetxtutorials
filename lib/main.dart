@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learngetx/home_screen.dart';
 import 'package:learngetx/screen_one.dart';
-
+import 'package:learngetx/utils/languages.dart';
+import 'change_language_screen.dart';
 import 'learnresponsiveness_concept_screen.dart';
 
 void main() {
@@ -16,9 +17,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const ResponsiveConceptScreen(),
+      home: const ChangeLanguage(),
+      translations: Languages(),
+      locale: const Locale('en', 'US'),
       getPages: [
-        GetPage(name: '/', page: () => const ResponsiveConceptScreen()),
+        GetPage(name: '/', page: () => const ChangeLanguage()),
         GetPage(name: '/screen', page: () => ScreenOne())
       ],
     );
