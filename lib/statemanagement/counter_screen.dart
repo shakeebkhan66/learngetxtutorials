@@ -12,8 +12,6 @@ class CounterScreen extends StatefulWidget {
 class _CounterScreenState extends State<CounterScreen> {
   CounterController counterController = Get.put(CounterController());
 
-  int count = 0;
-
   @override
   Widget build(BuildContext context) {
     print("rebuild");
@@ -79,18 +77,6 @@ class _CounterScreenState extends State<CounterScreen> {
               ],
             )
           ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          counterController.incrementCounter();
-        },
-        backgroundColor: Colors.deepPurpleAccent,
-        child: const Icon(
-          Icons.add,
-          color: Colors.white,
-          fill: 1.0,
-          size: 30,
         ),
       ),
     );
