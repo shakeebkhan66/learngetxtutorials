@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:learngetx/home_screen.dart';
 import 'package:learngetx/screen_one.dart';
 import 'package:learngetx/statemanagement/counter_screen.dart';
+import 'package:learngetx/switchbutton/switch_button_screen.dart';
 import 'package:learngetx/utils/languages.dart';
 import 'change_language_screen.dart';
 import 'learnresponsiveness_concept_screen.dart';
@@ -19,11 +20,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const OpacitySliderScreen(),
+      home: const SwitchButtonScreen(),
       translations: Languages(),
       locale: const Locale('en', 'US'),
       getPages: [
-        GetPage(name: '/', page: () => const OpacitySliderScreen()),
+        GetPage(name: '/', page: () => const SwitchButtonScreen()),
         GetPage(name: '/screen', page: () => ScreenOne())
       ],
     );
