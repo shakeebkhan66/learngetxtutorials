@@ -5,9 +5,9 @@ class ImageController extends GetxController{
 
   RxString imagePath = ''.obs;
 
-  Future getImage() async{
+  Future getImage(ImageSource source) async{
     final ImagePicker picker = ImagePicker();
-    final image = await picker.pickImage(source: ImageSource.camera);
+    final image = await picker.pickImage(source: source);
     if(image != null){
       imagePath.value = image.path.toString();
     }

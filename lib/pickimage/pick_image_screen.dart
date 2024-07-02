@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:learngetx/pickimage/image_controller.dart';
 
 class PickImageScreen extends StatefulWidget {
@@ -42,7 +43,7 @@ class _PickImageScreenState extends State<PickImageScreen> {
             ),
             TextButton(
               onPressed: () {
-                imageController.getImage();
+                imageController.getImage(ImageSource.camera);
               },
               child: const Text(
                 "Pick Image",

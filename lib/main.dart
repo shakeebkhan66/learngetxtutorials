@@ -7,6 +7,7 @@ import 'package:learngetx/statemanagement/counter_screen.dart';
 import 'package:learngetx/switchbutton/switch_button_screen.dart';
 import 'package:learngetx/utils/languages.dart';
 
+import 'authentication/login_screen.dart';
 import 'favourites/favourite_screen.dart';
 
 void main() {
@@ -20,11 +21,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const PickImageScreen(),
+      home: const LoginScreen(),
       translations: Languages(),
       locale: const Locale('en', 'US'),
       getPages: [
-        GetPage(name: '/', page: () => const PickImageScreen()),
+        GetPage(name: '/', page: () => const LoginScreen()),
         GetPage(name: '/screen', page: () => ScreenOne())
       ],
     );
