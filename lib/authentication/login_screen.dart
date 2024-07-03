@@ -43,16 +43,25 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(
                 height: 40,
               ),
-              InkWell(
-                onTap: () {
-                  loginController.loginApi();
-                },
-                child: Container(
-                  height: 45,
-                  color: Colors.deepPurpleAccent.withOpacity(.3),
-                  child: const Center(
-                    child: Text("Login", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),),
-                  ),
+              Obx(
+                () => InkWell(
+                  onTap: () {
+                    loginController.loginApi();
+                  },
+                  child: loginController.loading.value
+                      ? CircularProgressIndicator(
+                          color: Colors.deepPurpleAccent.withOpacity(.3),
+                        )
+                      : Container(
+                          height: 45,
+                          color: Colors.deepPurpleAccent.withOpacity(.3),
+                          child: const Center(
+                            child: Text(
+                              "Login",
+                              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
+                            ),
+                          ),
+                        ),
                 ),
               )
             ],

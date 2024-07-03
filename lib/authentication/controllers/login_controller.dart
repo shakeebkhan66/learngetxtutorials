@@ -7,7 +7,10 @@ class LoginController extends GetxController {
   final emailController = TextEditingController().obs;
   final passwordController = TextEditingController().obs;
 
+  RxBool loading = false.obs;
+
   void loginApi() async {
+    loading.value = true;
     try{
       final response = await post(
         Uri.parse("https://reqres.in/api/login"),
@@ -17,8 +20,10 @@ class LoginController extends GetxController {
       print("data $data");
       print("response ${response.statusCode}");
       if(response.statusCode == 200){
+        loading.value = false;
         Get.snackbar("Login Successfully", "Congratulations");
       }else{
+        loading.value = false;
         Get.snackbar("Login Failed", data["error"]);
       }
     }catch(e){
