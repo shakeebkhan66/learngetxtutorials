@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learngetx/mvvmstructure/res/routes/routes.dart';
 import 'package:learngetx/screen_one.dart';
 import 'package:learngetx/utils/languages.dart';
 import 'authentication/login_screen.dart';
@@ -19,10 +20,13 @@ class MyApp extends StatelessWidget {
       home: const SplashScreen(),
       translations: Languages(),
       locale: const Locale('en', 'US'),
-      getPages: [
-        GetPage(name: '/', page: () => const SplashScreen()),
-        GetPage(name: '/screen', page: () => ScreenOne())
-      ],
+      // getPages: [
+      //   GetPage(name: '/', page: () => const SplashScreen()),
+      //   GetPage(name: '/screen', page: () => ScreenOne())
+      // ],
+
+      getPages: AppRoutes.appRoutes(),
+
     );
   }
 }
